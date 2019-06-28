@@ -11,8 +11,9 @@ before_script: true
 script:
  -"./node_modules/.bin/retire"
  -"./node_modules/.bin/twly"
- 
+
 after_script: true
 
 
-deploy: true
+deploy:
+  provider: heroku
