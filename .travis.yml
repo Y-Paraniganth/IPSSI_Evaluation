@@ -1,5 +1,5 @@
 language : node_js
-php :
+node_js :
   - '12'
 before_install: true
 
@@ -9,6 +9,9 @@ install :
 before_script: true
 
 script: true
+
+ -"./node_modules/.bin/retire"
+ -"./node_modules/.bin/twly"
 after_script: true
 
 
