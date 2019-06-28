@@ -1,25 +1,15 @@
-language : php
+language : node_js
 php :
-  - '7.3'
-
-cache:
-  directories:
-    - $HOME/.composer/cache
-
+  - '12'
 before_install: true
 
 install :
-  - composer install
+  - npm install
 
 before_script: true
 
-script:
-  - ./vendor/bin/php-cs-fixer fix --dry-run --diff
-  - phpunit tests
-
+script: true
 after_script: true
 
 
-deploy:
-  provider: heroku
-  api_key:
+deploy: true
