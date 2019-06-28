@@ -1,5 +1,5 @@
 language : node_js
-node_js:
+node_js :
   - '12'
 before_install: true
 
@@ -8,12 +8,13 @@ install :
 
 before_script: true
 
-script: true
- - "./node_modules/.bin/retire "
+script:
+ - "./node_modules/.bin/retire"
  - "./node_modules/.bin/twly"
-
+ - if [ "$TRAVIS_BRANCH" = "master" ]; then "./node_modules/.bin/twly"; fi
 
 after_script: true
 
 
-deploy: true
+deploy:
+  provider: heroku
