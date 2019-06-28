@@ -1,7 +1,7 @@
 function createBitcoin() {
     console.log('Loading ...')
 
-    setTimeout(() => console.log('Created !');, 1000);
+;    setTimeout(() => console.log('Created !'), 1000);
 
    
 }
